@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lesson5LabB.MainPage">
+
+<ScrollView x:Name="scrollView">
+    <StackLayout HorizontalOptions="CenterAndExpand">
+        <StackLayout  x:Name="bearQuestions" >
+        <Label HorizontalTextAlignment="Center" Text="Bear Test" FontSize="Title" Padding="30,10,30,10"/>
+        
+        <Label Text="Do bears climb trees?"
+            FontSize="16" Padding="30,24,30,0">
+        </Label>
+        <Label HorizontalTextAlignment="End" Text="{Binding IsToggled, Source={x:Reference QuestionOne}}" />
+        <Switch x:Name="QuestionOne" OnColor="Green" ThumbColor="LightGreen" IsToggled="true"/>
+
+        <Label Text="Do bears like salmon?"
+            FontSize="16" Padding="30,24,30,0">
+        </Label>
+        <Label HorizontalTextAlignment="End" Text="{Binding IsToggled, Source={x:Reference QuestionTwo}}" />
+        <Switch x:Name="QuestionTwo" OnColor="Green" ThumbColor="LightGreen" IsToggled="true"/>
+
+
+        <Label Text="Do bears eat beets?"
+            FontSize="16" Padding="30,24,30,0">
+        </Label>
+        <Label HorizontalTextAlignment="End" Text="{Binding IsToggled, Source={x:Reference QuestionThree}}" />
+        <Switch x:Name="QuestionThree" OnColor="Green" ThumbColor="LightGreen" IsToggled="true"/>
+
+
+        <Label Text="Do bears run fast?"
+            FontSize="16" Padding="30,24,30,0">
+        </Label>
+         <Label HorizontalTextAlignment="End" Text="{Binding IsToggled, Source={x:Reference QuestionFour}}" />
+        <Switch x:Name="QuestionFour" OnColor="Green" ThumbColor="LightGreen" IsToggled="true"/>
+
+
+        <Label Text="Do bears like honey?"
+            FontSize="16" Padding="30,24,30,0">
+        </Label>
+         <Label HorizontalTextAlignment="End" Text="{Binding IsToggled, Source={x:Reference QuestionFive}}" />
+        <Switch x:Name="QuestionFive" OnColor="Green" ThumbColor="LightGreen" IsToggled="true"/>
+
+
+        </StackLayout>
+       
+        <Button x:Name="CalculateResults" Text="Get Results!! " Clicked="CalculateResults_Clicked" />
+
+         <Label x:Name="questionResults" />
+
+</StackLayout>
+</ScrollView>
+
+</ContentPage>
