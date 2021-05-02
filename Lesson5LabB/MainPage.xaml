@@ -4,8 +4,23 @@
              x:Class="Lesson5LabB.MainPage">
 
 <ScrollView x:Name="scrollView">
+
     <StackLayout HorizontalOptions="CenterAndExpand">
+
         <StackLayout  x:Name="bearQuestions" >
+
+
+        <BoxView Color="Teal" >
+    <BoxView.GestureRecognizers>
+        <SwipeGestureRecognizer Direction="Left" Swiped="OnSwiped"/>
+        <SwipeGestureRecognizer Direction="Right" Swiped="OnSwiped"/>
+        <SwipeGestureRecognizer Direction="Up" Swiped="OnSwiped"/>
+        <SwipeGestureRecognizer Direction="Down" Swiped="OnSwiped"/>
+    </BoxView.GestureRecognizers>
+</BoxView>
+
+ 
+ 
         <Label HorizontalTextAlignment="Center" Text="Bear Test" FontSize="Title" Padding="30,10,30,10"/>
         
         <Label Text="Do bears climb trees?"
@@ -14,6 +29,40 @@
         <Label HorizontalTextAlignment="End" Text="{Binding IsToggled, Source={x:Reference QuestionOne}}" />
         <Switch x:Name="QuestionOne" OnColor="Green" ThumbColor="LightGreen" IsToggled="true"/>
 
+
+            <SwipeView >
+            <SwipeView.LeftItems>
+                <SwipeItems Mode="Execute"
+                            SwipeBehaviorOnInvoked="RemainOpen">
+                    <SwipeItem x:Name="QuestionOneFalse"
+                               Text="False"
+                               IconImageSource="delete.png"
+                               BackgroundColor="LightPink"
+                               Invoked="SwipeItem_InvokedOne" />
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <SwipeView.RightItems >
+                <SwipeItems Mode="Execute"
+                            SwipeBehaviorOnInvoked="RemainOpen">
+                 <SwipeItem     x:Name="QuestionOneTrue"
+                               Text="True"
+                               IconImageSource="favorite.png"
+                               BackgroundColor="Green"
+                               Invoked="SwipeItem_InvokedOne" />
+                </SwipeItems>
+            </SwipeView.RightItems>
+            <!-- Content -->
+            <Grid HeightRequest="60"
+                  WidthRequest="600"
+                  BackgroundColor="LightGray">
+                <Label x:Name="SwipeAnswerOne" Text="{Binding}"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+        </SwipeView>
+
+
+
         <Label Text="Do bears like salmon?"
             FontSize="16" Padding="30,24,30,0">
         </Label>
@@ -21,11 +70,75 @@
         <Switch x:Name="QuestionTwo" OnColor="Green" ThumbColor="LightGreen" IsToggled="true"/>
 
 
+            <SwipeView >
+            <SwipeView.LeftItems>
+                <SwipeItems Mode="Execute"
+                            SwipeBehaviorOnInvoked="RemainOpen">
+                    <SwipeItem x:Name="QuestionTwoFalse"
+                               Text="False"
+                               IconImageSource="delete.png"
+                               BackgroundColor="LightPink"
+                               Invoked="SwipeItem_InvokedOne" />
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <SwipeView.RightItems >
+                <SwipeItems Mode="Execute"
+                            SwipeBehaviorOnInvoked="RemainOpen">
+                 <SwipeItem     x:Name="QuestionTwoTrue"
+                               Text="True"
+                               IconImageSource="favorite.png"
+                               BackgroundColor="Green"
+                               Invoked="SwipeItem_InvokedOne" />
+                </SwipeItems>
+            </SwipeView.RightItems>
+            <!-- Content -->
+            <Grid HeightRequest="60"
+                  WidthRequest="600"
+                  BackgroundColor="LightGray">
+                <Label x:Name="SwipeAnswerTwo" Text="{Binding}"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+        </SwipeView>
+
         <Label Text="Do bears eat beets?"
             FontSize="16" Padding="30,24,30,0">
         </Label>
         <Label HorizontalTextAlignment="End" Text="{Binding IsToggled, Source={x:Reference QuestionThree}}" />
         <Switch x:Name="QuestionThree" OnColor="Green" ThumbColor="LightGreen" IsToggled="true"/>
+
+
+
+            <SwipeView >
+            <SwipeView.LeftItems>
+                <SwipeItems Mode="Execute"
+                            SwipeBehaviorOnInvoked="RemainOpen">
+                    <SwipeItem x:Name="QuestionThreeFalse"
+                               Text="False"
+                               IconImageSource="delete.png"
+                               BackgroundColor="LightPink"
+                               Invoked="SwipeItem_InvokedOne" />
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <SwipeView.RightItems >
+                <SwipeItems Mode="Execute"
+                            SwipeBehaviorOnInvoked="RemainOpen">
+                 <SwipeItem     x:Name="QuestionThreeTrue"
+                               Text="True"
+                               IconImageSource="favorite.png"
+                               BackgroundColor="Green"
+                               Invoked="SwipeItem_InvokedOne" />
+                </SwipeItems>
+            </SwipeView.RightItems>
+            <!-- Content -->
+            <Grid HeightRequest="60"
+                  WidthRequest="600"
+                  BackgroundColor="LightGray">
+                <Label x:Name="SwipeAnswerThree" Text="{Binding}"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+        </SwipeView>
 
 
         <Label Text="Do bears run fast?"
@@ -35,11 +148,77 @@
         <Switch x:Name="QuestionFour" OnColor="Green" ThumbColor="LightGreen" IsToggled="true"/>
 
 
+            <SwipeView >
+            <SwipeView.LeftItems>
+                <SwipeItems Mode="Execute"
+                            SwipeBehaviorOnInvoked="RemainOpen">
+                    <SwipeItem x:Name="QuestionFourFalse"
+                               Text="False"
+                               IconImageSource="delete.png"
+                               BackgroundColor="LightPink"
+                               Invoked="SwipeItem_InvokedOne" />
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <SwipeView.RightItems >
+                <SwipeItems Mode="Execute"
+                            SwipeBehaviorOnInvoked="RemainOpen">
+                 <SwipeItem     x:Name="QuestionFourTrue"
+                               Text="True"
+                               IconImageSource="favorite.png"
+                               BackgroundColor="Green"
+                               Invoked="SwipeItem_InvokedOne" />
+                </SwipeItems>
+            </SwipeView.RightItems>
+            <!-- Content -->
+            <Grid HeightRequest="60"
+                  WidthRequest="600"
+                  BackgroundColor="LightGray">
+                <Label x:Name="SwipeAnswerFour" Text="{Binding}"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+        </SwipeView>
+
+
         <Label Text="Do bears like honey?"
             FontSize="16" Padding="30,24,30,0">
         </Label>
          <Label HorizontalTextAlignment="End" Text="{Binding IsToggled, Source={x:Reference QuestionFive}}" />
         <Switch x:Name="QuestionFive" OnColor="Green" ThumbColor="LightGreen" IsToggled="true"/>
+
+
+
+            <SwipeView >
+            <SwipeView.LeftItems>
+                <SwipeItems Mode="Execute"
+                            SwipeBehaviorOnInvoked="RemainOpen">
+                    <SwipeItem x:Name="QuestionFiveFalse"
+                               Text="False"
+                               IconImageSource="delete.png"
+                               BackgroundColor="LightPink"
+                               Invoked="SwipeItem_InvokedOne" />
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <SwipeView.RightItems >
+                <SwipeItems Mode="Execute"
+                            SwipeBehaviorOnInvoked="RemainOpen">
+                 <SwipeItem     x:Name="QuestionFiveTrue"
+                               Text="True"
+                               IconImageSource="favorite.png"
+                               BackgroundColor="Green"
+                               Invoked="SwipeItem_InvokedOne" />
+                </SwipeItems>
+            </SwipeView.RightItems>
+            <!-- Content -->
+            <Grid HeightRequest="60"
+                  WidthRequest="600"
+                  BackgroundColor="LightGray">
+                <Label x:Name="SwipeAnswerFive" Text="{Binding}"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+        </SwipeView>
+
 
 
         </StackLayout>
@@ -48,7 +227,12 @@
 
          <Label x:Name="questionResults" />
 
+      
+
+
 </StackLayout>
+
+
 </ScrollView>
 
 </ContentPage>
