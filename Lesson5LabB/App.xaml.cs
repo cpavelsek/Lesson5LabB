@@ -10,7 +10,7 @@ namespace Lesson5LabB
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage =  new MainPage();
         }
 
         protected override void OnStart()
